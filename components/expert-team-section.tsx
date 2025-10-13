@@ -11,7 +11,7 @@ const experts = [
     specialization: "Business English & Leadership Training",
     experience: "15+ năm kinh nghiệm quốc tế",
     description:
-      "Chuyên gia hàng đầu trong lĩnh vực đào tạo tiếng Anh doanh nghiệp với kinh nghiệm làm việc tại các tập đoàn đa quốc gia.",
+      "Chuyên gia hàng đầu trong lĩnh vực đào tạo tiếng Anh doanh nghiệp với kinh nghiệm làm việc tại tập đoàn đa quốc gia.",
     image: "/images/teachers/james.webp",
   },
   {
@@ -130,9 +130,9 @@ export default function ExpertTeamSection() {
     <section id="instructors" className="py-20 bg-gradient-to-b from-gray-50 to-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#01693c] mb-4">Đội ngũ giảng viên </h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#01693c] mb-4">&</h2>
-          <h2 className="text-3xl md:text-4xl font-bold text-[#01693c] mb-4">chuyên gia</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264C3] mb-4">Đội ngũ giảng viên </h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264C3] mb-4">&</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-[#3264C3] mb-4">chuyên gia</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Đội ngũ giảng viên & chuyên gia HLE với nhiều năm kinh nghiệm giảng dạy, kết hợp phương pháp học tập thực
             dụng và cá nhân hóa 1-1, giúp học viên tháo gỡ những khó khăn của riêng mình và tiến bộ rõ rệt trong quá
@@ -145,7 +145,7 @@ export default function ExpertTeamSection() {
           <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl">
             <div className="text-center mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-                Đội ngũ <span className="text-[#01693c]">chuyên gia</span>
+                Đội ngũ <span className="text-[#3264C3]">chuyên gia</span>
               </h3>
             </div>
             <div className="relative">
@@ -153,7 +153,7 @@ export default function ExpertTeamSection() {
                 {experts.map((expert) => (
                   <div
                     key={expert.id}
-                    className="bg-gradient-to-br from-green-100 to-green-200 rounded-xl p-6 hover:scale-105 transition-transform duration-300 flex-shrink-0 w-80 md:w-auto"
+                    className="bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl p-6 hover:scale-105 transition-transform duration-300 flex-shrink-0 w-80 md:w-auto"
                   >
                     <div className="aspect-[3/4] overflow-hidden rounded-lg mb-4 mx-auto max-w-[300px]">
                       <img
@@ -187,7 +187,7 @@ export default function ExpertTeamSection() {
         <div className="bg-white rounded-2xl p-6 md:p-12 shadow-2xl relative">
           <div className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-black mb-4">
-              Đội ngũ <span className="text-[#01693c]">giáo viên</span>
+              Đội ngũ <span className="text-[#3264C3]">giáo viên</span>
             </h3>
           </div>
 
@@ -237,7 +237,7 @@ export default function ExpertTeamSection() {
 
           <div className="flex items-center justify-center mt-6">
             <div className="flex items-center gap-2 bg-gradient-to-r from-green-50 to-purple-50 px-6 py-3 rounded-full text-sm text-gray-600 shadow-sm">
-              <Swipe className="w-4 h-4 text-green-500" />
+              <Swipe className="w-4 h-4 text-blue-500" />
               <span className="font-medium">Lướt ngang để khám phá thêm giáo viên</span>
             </div>
           </div>

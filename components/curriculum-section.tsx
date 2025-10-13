@@ -80,10 +80,10 @@ export function CurriculumSection() {
           <div className="inline-block bg-[#3264C3] text-white px-4 py-2 rounded-full text-sm font-medium mb-6">
             Lộ trình 5+1
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            BẠN SẼ NHẬN ĐƯỢC HƠN CẢ MỘT <span className="text-[#3264C3]">KHÓA HỌC</span>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            BẠN SẼ NHẬN ĐƯỢC HƠN CẢ MỘT <span className="text-[#3264C3]"></span>
           </h2>
-          <h3 className="text-4xl lg:text-5xl font-bold text-[#3264C3]">TIẾNG ANH</h3>
+          <h3 className="text-3xl lg:text-4xl font-bold text-[#3264C3]">KHÓA HỌC TIẾNG ANH</h3>
         </div>
 
         {/* Module list with expandable details */}
@@ -102,7 +102,7 @@ export function CurriculumSection() {
                     {module.number}
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg">{module.title}</h3>
+                    <h3 className="font-semibold text-sm">{module.title}</h3>
                     <p className="text-sm opacity-80">{module.subtitle}</p>
                   </div>
                 </div>
