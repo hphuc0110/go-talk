@@ -35,8 +35,8 @@ function Footer() {
               <div className="flex items-start gap-3">
                 <Phone className="h-5 w-5 text-[#3264c3] mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-900">Hotline:</p>
-                  <a href="tel:0325194889" className="text-[#3264c3] hover:underline">
+                  <p className="font-semibold text-gray-900 text-xs">Hotline:</p>
+                  <a href="tel:0325194889" className="text-[#3264c3] text-xs hover:underline">
                     0325 194 889
                   </a>
                 </div>
@@ -45,8 +45,8 @@ function Footer() {
               <div className="flex items-start gap-3">
                 <Mail className="h-5 w-5 text-[#3264c3] mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-900">Email:</p>
-                  <a href="mailto:support@honglinheducation.vn" className="text-[#3264c3] hover:underline">
+                  <p className="font-semibold text-gray-900 text-xs">Email:</p>
+                  <a href="mailto:support@honglinheducation.vn" className="text-[#3264c3] text-xs hover:underline">
                     support@honglinheducation.vn
                   </a>
                 </div>
@@ -55,8 +55,8 @@ function Footer() {
               <div className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-[#3264c3] mt-1" />
                 <div>
-                  <p className="font-semibold text-gray-900">Địa chỉ:</p>
-                  <p className="text-gray-700">1G Trần Quang Diệu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
+                  <p className="font-semibold text-xs text-gray-900">Địa chỉ:</p>
+                  <p className="text-gray-700 text-xs">1G Trần Quang Diệu, Ô Chợ Dừa, Đống Đa, Hà Nội</p>
                 </div>
               </div>
             </div>
@@ -160,7 +160,7 @@ function Footer() {
               <p className="text-sm font-semibold text-[#3264c3] mb-2">Part of our network</p>
               <div className="flex flex-col gap-1 text-sm">
                 <a
-                  href="https://hle.edu.vn"
+                  href="https://www.honglinheducation.vn/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#3264c3] hover:underline"
