@@ -6,6 +6,7 @@ import { MethodologySection } from "@/components/methodology-section"
 import { ExpertTeamSection } from "@/components/expert-team-section"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
+import { HallOfFameSection } from "@/components/hall-of-fame-section"
 
 export default function HomePage() {
   return (
@@ -20,9 +21,11 @@ export default function HomePage() {
       <div id="experts">
         <ExpertTeamSection />
       </div>
+      <HallOfFameSection/>
       <div id="contact">
         <ContactSection />
       </div>
+
       <Footer />
     </main>
   )

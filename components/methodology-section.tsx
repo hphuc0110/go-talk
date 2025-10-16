@@ -5,11 +5,12 @@ import { RefreshCw, User, Users, Shield } from "lucide-react"
 
 export function MethodologySection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null) // cho mobile click
 
   const steps = [
-    { icon: RefreshCw, label: "Tính gọn", content: "Thiết kế theo vị trí và mục tiêu ứng tuyển" },
-    { icon: User, label: "Thực chiến", content: "Luyện tập 100% trên lớp theo framework" },
-    { icon: Users, label: "Cá nhân hóa", content: "Mô phỏng phỏng vấn thật với giảng viên" },
+    { icon: RefreshCw, label: "Tính gọn", content: "Thiết kế theo vị trí, mục tiêu ứng tuyển" },
+    { icon: User, label: "Thực chiến", content: "Luyện tập 100% theo framework" },
+    { icon: Users, label: "Cá nhân hóa", content: "Mô phỏng phỏng vấn với giảng viên" },
     { icon: Shield, label: "Uy tín", content: "Học để áp dụng linh hoạt lâu dài" },
   ]
 
@@ -36,21 +37,31 @@ export function MethodologySection() {
               onMouseLeave={() => setHoveredIndex(null)}
             >
               {/* Icon */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-[#4f7de8] to-[#264ca3] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110">
+              <button
+                type="button"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 rounded-full bg-gradient-to-br from-[#4f7de8] to-[#264ca3] flex items-center justify-center mb-3 shadow-md transition-transform duration-300 hover:scale-110"
+                onClick={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
+              >
                 <step.icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
-              </div>
+              </button>
 
               {/* Label */}
-              <span className="text-black font-semibold text-sm sm:text-base">
+              <span className="text-black font-semibold text-xs sm:text-base">
                 {step.label}
               </span>
 
-              {/* Nội dung luôn hiển thị trên mobile, tooltip hover trên desktop */}
-              <div className="block lg:hidden mt-2 text-xs sm:text-sm text-black/70">
-                {step.content}
-              </div>
+              {/* Mobile: chỉ hiện khi nhấn icon */}
+              {activeIndex === index && (
+                <div className="block lg:hidden mt-2 text-xs sm:text-xs text-black/70 animate-fadeInUp">
+                  {step.content}
+                </div>
+              )}
+
+              {/* Desktop: hover tooltip */}
               {hoveredIndex === index && (
-                <div className="hidden lg:block absolute top-full mt-5 w-60 bg-white text-black text-sm p-4 rounded-xl shadow-lg z-10 animate-fadeInUp">
+                <div className="hidden lg:block absolute top-full mt-5 w-60 bg-white text-black text-xs p-4 rounded-xl shadow-lg z-10 animate-fadeInUp">
                   {step.content}
                 </div>
               )}
@@ -59,7 +70,7 @@ export function MethodologySection() {
         </div>
       </div>
 
-      {/* Animation keyframes */}
+      {/* Animation */}
       <style jsx>{`
         @keyframes fadeInUp {
           0% {
