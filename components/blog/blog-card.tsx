@@ -1,14 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Calendar, Clock, Tag } from "lucide-react"
+import { Clock, Tag } from "lucide-react"
 
 interface BlogPost {
   id: string
   title: string
-  excerpt: string
   image: string
-  date: string
-  category: string
   readTime: string
 }
 
@@ -19,7 +16,8 @@ interface BlogCardProps {
 export function BlogCard({ post }: BlogCardProps) {
   return (
     <article className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 group">
-      <div className="relative h-48 overflow-hidden">
+      {/* Ảnh 300x300 */}
+      <div className="relative w-[300px] h-[300px] mx-auto overflow-hidden">
         <Image
           src={post.image || "/placeholder.svg"}
           alt={post.title}
@@ -27,19 +25,12 @@ export function BlogCard({ post }: BlogCardProps) {
           className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
         <div className="absolute top-4 left-4">
-          <span className="inline-flex items-center gap-1 px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-full">
-            <Tag className="w-3 h-3" />
-            {post.category}
-          </span>
         </div>
       </div>
 
+      {/* Nội dung */}
       <div className="p-6">
         <div className="flex items-center gap-4 text-sm text-gray-500 mb-3">
-          <div className="flex items-center gap-1">
-            <Calendar className="w-4 h-4" />
-            {new Date(post.date).toLocaleDateString("vi-VN")}
-          </div>
           <div className="flex items-center gap-1">
             <Clock className="w-4 h-4" />
             {post.readTime}
@@ -51,8 +42,6 @@ export function BlogCard({ post }: BlogCardProps) {
             {post.title}
           </Link>
         </h3>
-
-        <p className="text-gray-600 mb-4 line-clamp-3 text-pretty">{post.excerpt}</p>
 
         <Link
           href={`/blog/${post.id}`}

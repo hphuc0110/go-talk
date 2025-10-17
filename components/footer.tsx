@@ -64,36 +64,12 @@ function Footer() {
             {/* Social Media */}
             <div className="flex gap-4 mt-6">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61577474738730   "
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#3264c3] p-3 rounded-full text-white hover:bg-[#b50001] transition-colors"
               >
                 <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#3264c3] p-3 rounded-full text-white hover:bg-[#b50001] transition-colors"
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#3264c3] p-3 rounded-full text-white hover:bg-[#b50001] transition-colors"
-              >
-                <Youtube className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-[#3264c3] p-3 rounded-full text-white hover:bg-[#b50001] transition-colors"
-              >
-                <MessageCircle className="h-5 w-5" />
               </a>
             </div>
           </div>

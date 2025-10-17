@@ -18,31 +18,30 @@ export function BlogPost({ post }: BlogPostProps) {
   return (
     <article className="bg-white">
       {/* Hero Section */}
-      <div className="relative h-[400px] md:h-[500px] overflow-hidden">
-        <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex items-end">
-          <div className="container mx-auto px-4 pb-12">
-            <div className="max-w-4xl">
-              <div className="flex items-center gap-4 text-white/80 text-sm mb-4">
-                <div className="flex items-center gap-1">
-                  <Tag className="w-4 h-4" />
-                  {post.category}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4" />
-                  {new Date(post.date).toLocaleDateString("vi-VN")}
-                </div>
-                <div className="flex items-center gap-1">
-                  <Clock className="w-4 h-4" />
-                  {post.readTime}
-                </div>
+      <div className="bg-gradient-to-r from-blue-50 to-blue-100 py-12">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex items-center gap-4 text-gray-600 text-sm mb-4">
+              <div className="flex items-center gap-1">
+                <Tag className="w-4 h-4" />
+                {post.category}
               </div>
-              <h1 className="text-3xl md:text-5xl font-bold text-white text-balance leading-tight">{post.title}</h1>
+              <div className="flex items-center gap-1">
+                <Calendar className="w-4 h-4" />
+                {new Date(post.date).toLocaleDateString("vi-VN")}
+              </div>
+              <div className="flex items-center gap-1">
+                <Clock className="w-4 h-4" />
+                {post.readTime}
+              </div>
             </div>
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+              {post.title}
+            </h1>
           </div>
         </div>
       </div>
+
 
       {/* Content */}
       <div className="container mx-auto px-4 py-12">
